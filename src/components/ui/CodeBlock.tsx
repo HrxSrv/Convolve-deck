@@ -33,11 +33,11 @@ function colorize(
         <span key={key++}>{line.slice(lastIndex, match.index)}</span>
       );
     }
-
+     
     if (match[1]) {
       // JSON key
       const isHighlighted =
-        highlights && Object.keys(highlights).some((h) => match[1]!.includes(h));
+        highlights && Object.keys(highlights).some((h) => match!.includes(h));
       parts.push(
         <span
           key={key++}
